@@ -1,10 +1,35 @@
 #user-nav {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     right: 0;
     left: 5vw;
-    height: 6vh;
+    height: 8vh;
     background-color: #464B37;
+}
+
+#userNavIcons {
+    display: flex;
+    margin: 5px;
+    margin-right: 25px;
+}
+
+#userNavIcons button {
+    background-color: transparent !important;
+}
+
+#userNavIcons button:hover {
+    border-color: #262B15;
+}
+
+#userNavIcons button:focus, button:focus-visible {
+    outline: none !important ;
+}
+
+.mainNavIcon {
+    height: 5vh;
+    float: right;
 }
 
 #site-nav {
@@ -22,34 +47,74 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 6vh;
+    align-items: center;
+    top: 8vh;
     left: 5vw;
+    background-color: gray;
+    outline: #262B15 1px solid;
 }
 
 #message-list.hidden {
     display: none;
 }
 
-#conversation-list {
+#message-search {
+    margin: 5px;
+}
+
+.test-message {
+    padding: 1px;
+    outline: #262B15 .5px solid;
+}
+
+#postbox-list {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 6vh;
+    align-items: center;
+    top: 8vh;
     left: 5vw;
+    background-color: gray;
+    outline: #262B15 1px solid;
 }
 
-#conversation-list.hidden {
+#postbox-list.hidden {
     display: none;
 }
 
+#postbox-search {
+    margin: 5px;
+}
+
+.test-postbox {
+    padding: 1px;
+    outline: #262B15 .5px solid;
+}
+
+#siteNavIcons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 33vh;
+    justify-content: space-between;
+}
+
+#siteNavIcons button {
+    background-color: transparent !important;
+}
+
+#siteNavIcons button:hover {
+    border-color: #464B37;
+}
+
+#siteNavIcons button:focus, button:focus-visible {
+    outline: none !important ;
+}
 
 .sideNavIcon {
     width: 3rem;
-}
-
-.mainNavIcon {
-    width: 3rem;
-    float: right;
+    align-self: center;
 }
 
 #app-search {

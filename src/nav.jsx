@@ -8,8 +8,14 @@ function UserNav() {
 return (
     <nav id="user-nav">
         <input type="text" name="app-search" id="app-search" />
-        <img src="/user.png" alt="User Info" className='mainNavIcon'/>
-        <img src="/notification-mailbox.png" alt="Notifications" className='mainNavIcon'/>
+        <div id="userNavIcons">
+            <button id="settings">
+                <img src="/notification-mailbox.png" alt="Notifications" className='mainNavIcon'/>
+            </button>
+            <button id="user-info">
+                <img src="/user.png" alt="User Info" className='mainNavIcon'/>
+            </button>
+        </div>
     </nav>)
 }
 
@@ -51,9 +57,9 @@ function PostboxList({ isVisible }) {
     const PostboxListClass = isVisible ? '' : 'hidden';
     
     return (
-        <div id="conversation-list" className={PostboxListClass}>
+        <div id="postbox-list" className={PostboxListClass}>
             Postboxes
-            <input type="text" name="conversation-search" id="conversation-search" />
+            <input type="text" name="postbox-search" id="postbox-search" />
             <div id="all-messages">
                 <div className="test-postbox">
                     <h4>Test Postbox Name</h4>
@@ -121,15 +127,17 @@ return (
     <div>
         <nav id="site-nav">
             <img src="" alt="PenPals Logo" id='app-logo'/>
-            <button id="messages" onClick={toggleMessages}> 
-                <img src="/message.png" alt="Messages" id='messages-icon' className='sideNavIcon'/> 
-            </button>
-            <button id="postboxes" onClick={toggleShowPostboxes}> 
-                <img src="/group-communication.png" alt="Conversations" className='sideNavIcon'/>
-            </button>
-            <button id="settings">
-                <img src="/setting.png" alt="Settings" className='sideNavIcon'/>
-            </button>
+            <div id='siteNavIcons'>
+                <button id='messages' onClick={toggleMessages}>
+                    <img src="/message.png" alt="Messages" className='sideNavIcon'/> 
+                </button>
+                <button id='postboxes' onClick={toggleShowPostboxes}>
+                    <img src="/group-communication.png" alt="Conversations" className='sideNavIcon'/>
+                </button>
+                <button id='settings'>
+                    <img src="/setting.png" alt="Settings" className='sideNavIcon'/>
+                </button>
+            </div>
         </nav>
         <MessageList isVisible={showMessages} />
         <PostboxList  isVisible={showPostboxes}/>
